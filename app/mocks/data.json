@@ -1,0 +1,20 @@
+[{
+    "id": 0,
+    "guid": "1351e759-3a06-4479-8f9c-1109a80488b9",
+    "isActive": true,
+    "balance": "$3,862.33",
+    "picture": "http://placehold.it/32x32",
+    "age": 29,
+    "eyeColor": "green",
+    "firstname": "Roslyn",
+    "lastname": "Russo",
+    "gender": "female",
+    "company": "TERRAGO",
+    "email": "roslynrusso@terrago.com",
+    "phone": "+1 (992) 522-2873",
+    "address": "786 Dooley Street, Vincent, North Carolina, 6741",
+    "about": "Tempor excepteur voluptate et reprehenderit et. Enim esse veniam nisi sit Lorem excepteur sit commodo laborum occaecat id adipisicing sit proident. Ad magna Lorem in nisi enim et ex aute nostrud magna do. Dolore sunt ipsum ex adipisicing anim do dolor in veniam nulla nisi. Id anim exercitation ad deserunt incididunt aliquip.\r\n",
+    "registered": "2014-05-05T03:34:22 -02:00",
+    "latitude": 70.631832,
+    "longitude": 161.402573
+}]

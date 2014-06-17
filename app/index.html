@@ -1,0 +1,89 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    </head>
+<body ng-app="errorApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="container" ng-controller="MainCtrl">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li><a ng-href="" ng-click="loadUser()">OKKKKK</a></li>
+            <li><a ng-href="" ng-click="ajaxError()">Ajax error</a></li>
+            <li><a ng-href="" ng-click="controllerError()">Controller error</a></li>
+            <li><a ng-href="" onclick="globalClick()">Global error</a></li>
+        </ul>
+        <h3 class="text-muted">angular error</h3>
+    </div>
+
+    <div class="jumbotron">
+        <div class="user" ng-hide="error">
+            <h1>Who you are</h1>
+
+            <div ng-repeat="user in users">
+                <p>Firstname:{{user.firstname}}</p>
+                <p>Lastname:{{user.lastname}}</p>
+                <p>Age:{{user.age}}</p>
+            </div>
+        </div>
+
+        <div class="error" ng-show="error">
+            <h1>OUUPS !!!</h1>
+            
+            <p>{{error.message}}</p>
+            <p class="errorStack">{{error.stack}}</p>
+            <a href="" ng-click="reset()">Clear</a>
+        </div>
+    </div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/services/globalerrorhandler.js"></script>
+<script src="scripts/services/errorhttpinterceptor.js"></script>
+<script src="scripts/decorators/windowDecorator.js"></script>
+<script src="scripts/decorators/exceptionhandlerDecorator.js"></script>
+<!-- endbuild -->
+</body>
+</html>
