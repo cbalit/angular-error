@@ -2,6 +2,7 @@
 
 angular.module('errorApp')
   .factory('GlobalErrorHandler', function () {
+
         var service = {
             error: function (error) {
                 this.onError(error);
@@ -10,7 +11,7 @@ angular.module('errorApp')
                 var error=new Error(rejection.data);
                 this.onAjaxError(error);
             },
-            onError: function () {
+            onError: function (error) {
             },
             onAjaxError: function () {
             }

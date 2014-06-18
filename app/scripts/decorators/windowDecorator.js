@@ -6,7 +6,7 @@ angular.module('errorApp')
         $delegate.onerror = function (errorMsg, url, lineNumber) {
             var error = new Error(errorMsg, url, lineNumber);
             GlobalErrorHandler.error(error);
-        }
+        };
       return $delegate;
     });
   });

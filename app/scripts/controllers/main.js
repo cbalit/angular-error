@@ -1,12 +1,15 @@
 'use strict';
 
 function globalClick(){
-    unexisting();
+    throw new Error("JAVSCRIPT RUN TIME ERROR");
 }
 
 angular.module('errorApp')
     .controller('MainCtrl', function ($scope, $http, GlobalErrorHandler,$log) {
-        GlobalErrorHandler.onError = function (error) {
+
+
+
+        GlobalErrorHandler.onError=function (error) {
             $log.error("AN ERROR OCCURED:"+error.message);
             $log.info("STACK:"+error.stack);
             $scope.error = error;
@@ -33,7 +36,7 @@ angular.module('errorApp')
         };
 
         $scope.controllerError = function () {
-            throw new Error("RUN TIME ERROR");
+            throw new Error("ANGULAR RUN TIME ERROR");
         };
 
         $scope.reset = function () {
